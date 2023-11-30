@@ -19,14 +19,7 @@ function RepoItem({repo}) {
     <div className="mb-2 rounded-md card bg-grey-800 hover:bg-gray-900">
       <div className="card-body bg-gray-100 rounded-lg">
         <h3 className="mb-2 text-xl font-semibold">
-          <ReactTinyLink
-            cardSize="small"
-            showGraphic={true}
-            header={name}
-            maxLine={2}
-            minLine={1}
-            url={html_url}
-          />
+          {name}
         </h3>
         <p className="mb-3">{description}</p>
         <div className="mr badge badge-info badge-lg">
