@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FaEye, FaInfo, FaLink, FaStar, FaUtensils, faUtensils } from 'react-icons/fa'
+import { ReactTinyLink } from "react-tiny-link";
+import ScrollToTop from "react-scroll-to-top";
+
 function RepoItem({repo}) {
     const {
         name,
@@ -16,10 +19,14 @@ function RepoItem({repo}) {
     <div className="mb-2 rounded-md card bg-grey-800 hover:bg-gray-900">
       <div className="card-body bg-gray-100 rounded-lg">
         <h3 className="mb-2 text-xl font-semibold">
-          <a href={html_url}>
-            <FaLink className="inline mr-1" />
-            {name}
-          </a>
+          <ReactTinyLink
+            cardSize="small"
+            showGraphic={true}
+            header={name}
+            maxLine={2}
+            minLine={1}
+            url={html_url}
+          />
         </h3>
         <p className="mb-3">{description}</p>
         <div className="mr badge badge-info badge-lg">
@@ -38,6 +45,7 @@ function RepoItem({repo}) {
           <FaUtensils className="mr-2" /> {forks}
         </div>
       </div>
+      <ScrollToTop smooth />
     </div>
   );
 }

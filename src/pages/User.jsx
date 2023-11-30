@@ -76,7 +76,7 @@ function User() {
               <a
                 href={html_url}
                 target="_blank"
-                rel="norefferrer"
+                rel="noreferrer"
                 className="btn btn-outline"
               >
                 Vist Github Profile
@@ -97,7 +97,7 @@ function User() {
               <div className="stat">
                 <div className="stat-title text-md">Website</div>
                 <div className="text-lg stat-value">
-                  <a href={`https://${blog}`} target="_blank" rel="norefferrer">
+                  <a href={`https://${blog}`} target="_blank" rel="noreferrer">
                     {blog}
                   </a>
                 </div>
@@ -111,7 +111,7 @@ function User() {
                   <a
                     href={`https://twitter.com/${twitter_username}`}
                     target="_blank"
-                    rel="norefferrer"
+                    rel="noreferrer"
                   >
                     {blog}
                   </a>
