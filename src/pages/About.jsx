@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
   return (
     <div>
-      <h1 className="text-6xl">Github Finder</h1>
+      <h1 className="text-6xl font-bold">GitHub Finder</h1>
       <p className="mb-4 text-2xl font-light">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
         assumenda consectetur quidem delectus dolorum a vitae doloribus nesciunt
@@ -20,12 +20,12 @@ function About() {
         </strong>
         
       </p>
-      <p className="text-lg text-gray-400">
-        Version <span className="text-white">1.0.0</span>
+      <p className="text-lg">
+        Version <span>1.0.0</span>
       </p>
-      <p className="text-lg text-gray-400">
+      <p className="text-lg">
         Layout By: 
-        <a className="text-white" href="https://twitter.com/adegoroye_65810">
+        <a className="ml-2" href="https://twitter.com/adegoroye_65810">
         Tobi Adegoroye
         </a>
       </p>

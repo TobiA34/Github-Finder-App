@@ -52,12 +52,7 @@ function User() {
               <img src={avatar_url} alt="" />
             </figure>
             <div className="card-body justify-end">
-              <strong>
-                <h2 className="card-title align-text-bottom text-white font-bold mb-0">
-                  {name}
-                </h2>
-                <p className="text-white">{login}</p>
-              </strong>
+           
             </div>
           </div>
         </div>
@@ -77,7 +72,7 @@ function User() {
                 href={html_url}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-outline"
+                className="btn btn-outline outline-offset-2 outline-2"
               >
                 Vist Github Profile
               </a>
@@ -129,7 +124,7 @@ function User() {
             </div>
             <div className="stat-title pr-5">Followers</div>
             <div className="stat-value pr-5 text-3xl md:text-4xl">
-              {followers}
+              <p className="dark: text-white">{followers}</p>
             </div>
           </div>
 
@@ -139,7 +134,7 @@ function User() {
             </div>
             <div className="stat-title pr-5">Following</div>
             <div className="stat-value pr-5 text-3xl md:text-4xl">
-              {following}
+              <p className="dark: text-white">{following}</p>
             </div>
           </div>
           <div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats p-4">
@@ -148,19 +143,18 @@ function User() {
             </div>
             <div className="stat-title pr-5">Public repo</div>
             <div className="stat-value pr-5 text-3xl md:text-4xl">
-              {public_repos}
+              <p className="dark:text-white">{public_repos}</p>
             </div>
           </div>
           <div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats p-4">
             <div className="stat-figure text-secondary"></div>
             <div className="stat-title pr-5">Public Gists</div>
             <div className="stat-value pr-5 text-3xl md:text-4xl">
-              {public_gists}
+              <p className="dark:text-white"> {public_gists}</p>
             </div>
           </div>
         </div>
       </div>
- 
       <RepoList repos={repos} />
     </div>
   );

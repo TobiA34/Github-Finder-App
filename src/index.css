@@ -7,6 +7,19 @@
     opacity: 0;
 }
 
-.footer {
-    background-color: #291334;
+ 
+
+body { 
+    background: none;
+}
+
+div {
+    background: none;
+}
+
+main {
+    background: none;
+}
+html{
+    background:  none;
 }

@@ -16,9 +16,9 @@ function App() {
     <GithubProvider>
       <AlertProvider>
         <Router>
-          <div className="flex flex-col justify-between h-screen">
+          <div className="flex flex-col justify-between ">
             <Navbar />
-            <main className="container mx-auto px-3 pb-12">
+            <div className="container mx-auto px-3 pb-12">
               <Alert />
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/notfound" element={<NotFound />} />
                 <Route path="/*" element={<NotFound />} />
               </Routes>
-            </main>
+            </div>
             <Footer />
           </div>
         </Router>
