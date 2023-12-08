@@ -1,22 +1,30 @@
-import {FaCodepen, FaStore, FaUserFriends, FaUsers} from 'react-icons/fa'
+import {FaCodepen, FaUserFriends, FaUsers} from 'react-icons/fa'
 import React from 'react'
 import { useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Spinner from '../components/layout/Spinner'
 import GithubContext from '../context/github/GithubContext'
  import RepoList from '../components/repos/RepoList'
+ import {getUserAndRepos} from '../context/github/GithubActions'
  
 function User() {
-    const { getUser, user, loading, getUserRepos, repos } =
+    const {user, dispatch, loading, repos } =
       useContext(GithubContext);
 
     const params = useParams()
 
     useEffect(() => {
-        getUser(params.login)
-        getUserRepos(params.login);
-
-    },[])
+        dispatch({ type: "SET_LOADING" });
+        const getUserData = async() => {
+          const userData = await getUserAndRepos(params.login)
+          dispatch({
+            type: 'GET_USER_AND_REPOS',
+            payload: userData
+          })
+         
+       }
+        getUserData()
+     },[])
 
     const {
       name,
@@ -116,8 +124,8 @@ function User() {
           </div>
         </div>
       </div>
-      <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           <div className="w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats p-4">
             <div className="stat-figure text-secondary">
               <FaUsers className="text-3xl md:text-5xl" />

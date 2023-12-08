@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FaEye, FaInfo, FaLink, FaStar, FaUtensils, faUtensils } from 'react-icons/fa'
-import { ReactTinyLink } from "react-tiny-link";
+import { FaEye, FaInfo, FaStar, FaUtensils } from 'react-icons/fa'
 import ScrollToTop from "react-scroll-to-top";
 
 function RepoItem({repo}) {
